@@ -1,9 +1,15 @@
+// quiz.js
+const perguntas = [
+    { pergunta: "Qual é a capital do Brasil?", resposta: "Brasília" }
+];
+
 export function perguntaQuiz() {
-  return perguntas[Math.floor(Math.random() * perguntas.length)].pergunta;
+    const perguntaAleatoria = perguntas[Math.floor(Math.random() * perguntas.length)];
+    return perguntaAleatoria.pergunta;
 }
 
-export function verificarResposta(resposta) {
-  const atual = perguntas.find(p => resposta.toLowerCase() === p.resposta.toLowerCase());
-  return atual ? "✅ Correto!" : "❌ Errado.";
+export function verificarResposta(respostaUsuario) {
+    const perguntaAleatoria = perguntas[Math.floor(Math.random() * perguntas.length)];
+    return respostaUsuario === perguntaAleatoria.resposta;
 }
 

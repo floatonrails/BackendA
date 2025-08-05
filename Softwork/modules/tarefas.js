@@ -1,11 +1,11 @@
-const tarefas = [];
+// tarefas.js
+let tarefas = [];
 
-export function adicionarTarefa(texto) {
-  if (texto) tarefas.push(texto);
+export function adicionarTarefa(tarefa) {
+    tarefas.push(tarefa);
 }
 
 export function mostrarTarefas() {
-  console.log("📒 Tarefas:");
-  tarefas.forEach((t, i) => console.log(`${i + 1}. ${t}`));
+    return tarefas;
 }
 
